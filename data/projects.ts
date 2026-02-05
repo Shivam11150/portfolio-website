@@ -1,8 +1,8 @@
 export const projects = [
   {
     slug:"people-for-you",
-    title: "People For You",
-    role: "Product Manager",
+    title: "HighOneShop — B2B Business Chat & Commerce Platform",
+    role: "Built and scaled a B2B product helping businesses manage operations and customer communication — from MVP to real, paid users",
     outcome: "Built a people record and search system",
   },
   {
