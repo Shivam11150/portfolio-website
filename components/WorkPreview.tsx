@@ -1,6 +1,7 @@
 
 import { projects } from "@/data/projects";
 import Link from "next/link";
+import HighOneShopCard from "./HighOneShopCard";
 
 export default function WorkPreview() {
   return (
@@ -25,6 +26,7 @@ export default function WorkPreview() {
 
         {/* Projects list */}
         <div className="grid gap-6">
+          <HighOneShopCard />
           {projects.map((project) => (
             <Link
               key={project.slug}
