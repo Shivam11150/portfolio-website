@@ -1,7 +1,9 @@
 
-import { projects } from "@/data/projects";
 import Link from "next/link";
 import HighOneShopCard from "./HighOneShopCard";
+import CreativeGarmentsCard from "./CreativeGarmentsCard";
+import SatnamTradersCard from "./SatnamTradersCard";
+import KishanMitroCard from "./kishanmitro";
 
 export default function WorkPreview() {
   return (
@@ -27,45 +29,11 @@ export default function WorkPreview() {
         {/* Projects list */}
         <div className="grid gap-6">
           <HighOneShopCard />
-          {projects.map((project) => (
-            <Link
-              key={project.slug}
-              href={`/work/${project.slug}`}
-              className="
-                group
-                block
-                rounded-2xl
-                border border-white/10
-                bg-black/60
-                backdrop-blur
-                p-7
-                transition-all duration-300
-                hover:-translate-y-1
-                hover:border-purple-500/40
-                hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]
-              "
-            >
-              <div className="flex flex-col gap-3">
-                <h3 className="text-lg md:text-xl font-semibold text-white">
-                  {project.title}
-                </h3>
-
-                <p className="text-sm font-medium text-purple-400">
-                  {project.role}
-                </p>
-
-                <p className="text-sm md:text-base text-gray-400 leading-relaxed">
-                  {project.outcome}
-                </p>
-              </div>
-
-              {/* Hover affordance */}
-              <div className="mt-5 text-sm font-medium text-purple-400 opacity-0 group-hover:opacity-100 transition">
-                View case study →
-              </div>
-            </Link>
-          ))}
+          <CreativeGarmentsCard />
+          <SatnamTradersCard />
+          <KishanMitroCard />
         </div>
+
 
       </div>
     </section>
@@ -121,7 +89,7 @@ export default function WorkPreview() {
             </Link>
           ))}
         </div>
-
+/*
       </div>
     </section>
   );

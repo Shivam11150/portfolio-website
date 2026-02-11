@@ -1,14 +1,32 @@
-export const projects = [
-  {
-    slug:"people-for-you",
-    title: "HighOneShop — B2B Business Chat & Commerce Platform",
-    role: "Built and scaled a B2B product helping businesses manage operations and customer communication — from MVP to real, paid users",
-    outcome: "Built a people record and search system",
-  },
-  {
-    slug:"erp-system",
-    title: "ERP System",
-    role: "Product Manager",
-    outcome: "Designed core ERP modules for SMBs",
-  },
-];
+export type Project = {
+  slug: string;
+  title: string;
+  role: string;
+  journey: string;                    // e.g., "0 → 1 → Scale"
+  description: string;
+  
+  impact: {
+    metrics: [
+      { label: string; value: string },
+      { label: string; value: string },
+      { label: string; value: string },
+      { label: string; value: string }
+    ];
+    platforms?: {
+      name: string;
+      href: string;
+    }[];
+    status: string;
+  };
+  
+  deliverables: {
+    title: string;
+    description: string;
+  }[];
+  
+  cta: {
+    text: string;
+    href: string;
+  };
+};
+
