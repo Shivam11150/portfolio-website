@@ -1,4 +1,5 @@
-export default function HighOneShopCard() {
+import Link from "next/link";
+export default function HieeOneShopCard() {
   return (
     <article
       className="
@@ -11,7 +12,7 @@ export default function HighOneShopCard() {
       {/* Title + role */}
       <header className="space-y-2">
         <h3 className="text-xl md:text-2xl font-semibold text-white">
-          HighOneShop — B2B Business Chat &amp; Commerce Platform
+          HieeOneShop — B2B Business Chat &amp; Commerce Platform
         </h3>
 
         <p className="text-sm md:text-base text-purple-400 font-medium">
@@ -113,8 +114,7 @@ export default function HighOneShopCard() {
                   Product discovery &amp; prioritization
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Identified core user problems and business constraints, and
-                  prioritized solutions that could be built and adopted.
+                  Understanding user problems , Business constraints and – what to build.
                 </p>
               </div>
             </div>
@@ -129,8 +129,8 @@ export default function HighOneShopCard() {
                   Design–engineering alignment
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Translated requirements into clear flows, bridged gaps between design
-                  and development teams, and supported sprint planning and execution.
+                  Translating requirements into clear flows, 
+                  how to build – and executed building.
                 </p>
               </div>
             </div>
@@ -145,8 +145,9 @@ export default function HighOneShopCard() {
                   MVP launch &amp; iteration
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Led the MVP launch with real users and GTM execution, then iterated
-                  based on feedback with continuous scaling and improvement in progress.
+                  Product launch, GTM execution, User feed back 
+                  --  scaling and improvement in progress.
+
                 </p>
               </div>
             </div>
@@ -156,19 +157,19 @@ export default function HighOneShopCard() {
 
       {/* CTA */}
       <div className="pt-2">
-        <button
-          type="button"
-          className="
-            inline-flex items-center justify-center
+  <Link href="/work/hieeoneshop">
+    <button 
+      type="button" 
+      className=" inline-flex items-center justify-center
             rounded-xl px-5 py-2.5
             bg-purple-600 text-white text-sm font-semibold
             hover:bg-purple-700 hover:shadow-[0_0_18px_rgba(168,85,247,0.45)]
-            transition-all duration-200
-          "
-        >
-          View full case study
-        </button>
-      </div>
+            transition-all duration-200"
+    >
+      View full case study
+    </button>
+  </Link>
+</div>
     </article>
   );
 }

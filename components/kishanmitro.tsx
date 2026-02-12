@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function KishanMitroCard() {
   return (
     <article
@@ -149,20 +151,20 @@ export default function KishanMitroCard() {
       </section>
 
       {/* CTA */}
-      <div className="pt-2">
-        <button
-          type="button"
-          className="
-            inline-flex items-center justify-center
+     <div className="pt-2">
+  <Link href="/work/kishanmitra">
+    <button 
+      type="button" 
+      className=" inline-flex items-center justify-center
             rounded-xl px-5 py-2.5
             bg-purple-600 text-white text-sm font-semibold
             hover:bg-purple-700 hover:shadow-[0_0_18px_rgba(168,85,247,0.45)]
-            transition-all duration-200
-          "
-        >
-          View full case study
-        </button>
-      </div>
+            transition-all duration-200"
+    >
+      View full case study
+    </button>
+  </Link>
+</div>
     </article>
   );
 }

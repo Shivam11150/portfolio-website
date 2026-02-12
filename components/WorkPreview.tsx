@@ -1,9 +1,9 @@
 
 import Link from "next/link";
-import HighOneShopCard from "./HighOneShopCard";
+import HieeOneShopCard from "./HieeOneShopCard";
 import CreativeGarmentsCard from "./CreativeGarmentsCard";
 import SatnamTradersCard from "./SatnamTradersCard";
-import KishanMitroCard from "./kishanmitro";
+import KishanMitroCard from "./KishanMitro";
 
 export default function WorkPreview() {
   return (
@@ -28,7 +28,7 @@ export default function WorkPreview() {
 
         {/* Projects list */}
         <div className="grid gap-6">
-          <HighOneShopCard />
+          <HieeOneShopCard />
           <CreativeGarmentsCard />
           <SatnamTradersCard />
           <KishanMitroCard />
