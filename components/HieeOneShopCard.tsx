@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image"
+
 export default function HieeOneShopCard() {
   return (
     <article
@@ -7,23 +9,25 @@ export default function HieeOneShopCard() {
         rounded-2xl border border-white/10
         bg-black/70 backdrop-blur
         p-6 md:p-8 space-y-6
+        transition-all duration-200
+        hover:scale-101 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]
       "
     >
       {/* Title + role */}
-      <header className="space-y-2">
+      <div className="space-y-2">
         <h3 className="text-xl md:text-2xl font-semibold text-white">
-          HieeOneShop — B2B Business Chat &amp; Commerce Platform
+          HieeOneShop — B2B Business Chat &amp; Commerce App
         </h3>
 
         <p className="text-sm md:text-base text-purple-400 font-medium">
           Product Manager&nbsp;&nbsp;|&nbsp;&nbsp;0 → 1 → Scale
         </p>
-      </header>
+      </div>
 
       {/* Product description */}
       <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-        Built and scaled a B2B product helping businesses manage operations and
-        customer communication — from MVP to real, paid users.
+        <span className="font-semibold text-white">Built and scaled</span> a B2B product helping businesses manage operations and
+        customer communication — from <span className="font-semibold text-purple-500">MVP</span> to real, <span className="font-semibold text-purple-500">paid users</span>.
       </p>
 
       {/* Product Impact Box */}
@@ -47,48 +51,45 @@ export default function HieeOneShopCard() {
 
           {/* Top Right: App rating */}
           <div className="space-y-1">
-            <p className="text-sm text-gray-300">App rating</p>
+            <p className="text-sm text-gray-300">Play store rating</p>
             <p className="text-4xl md:text-5xl font-bold text-white">4.7 ⭐</p>
           </div>
 
           {/* Bottom Left: Available on */}
           <div className="space-y-3">
-            <p className="text-sm text-gray-300">Available on</p>
-            <div className="flex flex-wrap gap-3">
-              <button
-                type="button"
-                className="
-                  inline-flex items-center gap-2
-                  px-4 py-2
-                  bg-white border border-purple-500
-                  text-purple-600 text-sm font-semibold
-                  rounded-lg
-                  hover:bg-purple-50 hover:border-purple-600
-                  transition-all duration-200
-                "
-              >
-                <div className="w-4 h-4 bg-purple-600 rounded-sm" />
-                Play Store
-              </button>
-              <button
-                type="button"
-                className="
-                  inline-flex items-center gap-2
-                  px-4 py-2
-                  bg-white border border-purple-500
-                  text-purple-600 text-sm font-semibold
-                  rounded-lg
-                  hover:bg-purple-50 hover:border-purple-600
-                  transition-all duration-200
-                "
-              >
-                <svg className="w-4 h-4 text-purple-600 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.43.07 1.17-.34 2.35-1.04 3.19z" />
-                </svg>
-                App Store
-              </button>
-            </div>
-          </div>
+  <p className="text-sm text-gray-300">Available on</p>
+
+  <div className="flex flex-wrap gap-4">
+
+    {/* Play Store */}
+    <Link href="https://play.google.com" target="_blank">
+      <div className="hover:opacity-80 transition-all duration-200">
+        <Image
+          src="/images/store/playstore.png"
+          alt="Get it on Google Play"
+          width={50}
+          height={16}
+          className="object-contain"
+        />
+      </div>
+    </Link>
+
+    {/* App Store */}
+    <Link href="https://apps.apple.com" target="_blank">
+      <div className="hover:opacity-80 transition-all duration-200">
+        <Image
+          src="/images/store/appstore.png"
+          alt="Download on the App Store"
+          width={50}
+          height={16}
+          className="object-contain"
+        />
+      </div>
+    </Link>
+
+  </div>
+</div>
+
 
           {/* Bottom Right: Current status */}
           <div className="space-y-1">
@@ -114,7 +115,7 @@ export default function HieeOneShopCard() {
                   Product discovery &amp; prioritization
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Understanding user problems , Business constraints and – what to build.
+                  Understanding user problems , Business constraints and – <span className="font-semibold text-purple-400"> what to build.</span>
                 </p>
               </div>
             </div>
@@ -130,7 +131,7 @@ export default function HieeOneShopCard() {
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
                   Translating requirements into clear flows, 
-                  how to build – and executed building.
+                  how to build <span className="font-semibold text-purple-400">–  and executed building.</span>
                 </p>
               </div>
             </div>
@@ -146,7 +147,7 @@ export default function HieeOneShopCard() {
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
                   Product launch, GTM execution, User feed back 
-                  --  scaling and improvement in progress.
+                  --<span className="font-semibold text-purple-400"> scaling and improvement in progress.</span> 
 
                 </p>
               </div>
@@ -156,20 +157,20 @@ export default function HieeOneShopCard() {
       </section>
 
       {/* CTA */}
-      <div className="pt-2">
-  <Link href="/work/hieeoneshop">
-    <button 
-      type="button" 
-      className=" inline-flex items-center justify-center
-            rounded-xl px-5 py-2.5
-            bg-purple-600 text-white text-sm font-semibold
-            hover:bg-purple-700 hover:shadow-[0_0_18px_rgba(168,85,247,0.45)]
-            transition-all duration-200"
-    >
-      View full case study
-    </button>
-  </Link>
-</div>
+      <div className="pt-4 flex justify-center">
+        <Link href="/work/hieeoneshop">
+          <button 
+            type="button" 
+            className="inline-flex items-center justify-center
+                  rounded-xl px-5 py-2.5
+                  bg-purple-600 text-white text-sm font-semibold
+                  hover:bg-purple-700 hover:shadow-[0_0_18px_rgba(168,85,247,0.45)]
+                  transition-all duration-200"
+          >
+            View full case study
+          </button>
+        </Link>
+      </div>
     </article>
   );
 }

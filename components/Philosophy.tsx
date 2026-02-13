@@ -6,7 +6,7 @@ export default function Philosophy() {
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-purple-950/30 pointer-events-none" />
 
-      <div className="relative max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <div className="relative max-w-7xl mx-auto px-3 py-8 md:py-12">
         <div className="max-w-3xl">
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed">
             I believe good products are built through clear thinking, team collaboration, and thoughtful execution.

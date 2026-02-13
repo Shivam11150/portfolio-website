@@ -11,7 +11,7 @@ export default function EndingConnect() {
           {/* Content */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Thanks for taking the time to explore my <span className="text-purple-400">work</span>.
+              Thanks for <span className="text-purple-400">being here</span>.
             </h2>
             
             <div className="space-y-4 max-w-2xl mx-auto">
