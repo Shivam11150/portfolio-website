@@ -1,3 +1,101 @@
+
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+
+export default function Navbar() {
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "Work", href: "#work" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header
+      className={`sticky top-0 z-50 border-b transition-all duration-300
+        ${
+          isScrolled
+         ? "bg-black/80 backdrop-blur-xl border-b border-purple-500/40 shadow-lg shadow-black/40"
+         : "bg-black border-b border-transparent"
+        }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+
+        {/* Logo */}
+        <Link
+          href="/"
+          className="text-lg md:text-xl font-semibold text-white tracking-wide"
+        >
+          Shivam Somya<span className="text-purple-500">.</span>
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navItems.map((item) => {
+            const isActive =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(item.href);
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`relative text-sm font-medium transition-colors ${
+                  isActive
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* CTA */}
+        <Link
+          href="/contact"
+          className="hidden md:inline-flex items-center px-5 py-2.5 rounded-xl
+                     bg-purple-600 text-white text-sm font-semibold
+                     hover:bg-purple-800
+                     transition-colors duration-300"
+        >
+          Let’s Talk
+        </Link>
+
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-white"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+    </header>
+  );
+}
+
+
+/* existing navbar unrespoonsive . 
 "use client";
 
 import Link from "next/link";
@@ -17,7 +115,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         
-        {/* Logo */}
+     
         <Link
           href="/"
           className="text-lg font-semibold text-white tracking-wide"
@@ -25,7 +123,7 @@ export default function Navbar() {
           Shivam Somya<span className="text-purple-500">.</span>
         </Link>
 
-        {/* Nav links */}
+        
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => {
             const isActive =
@@ -45,7 +143,7 @@ export default function Navbar() {
               >
                 {item.name}
 
-                {/* Active indicator */}
+                
                 {isActive && (
                   <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-purple-500" />
                 )}
@@ -54,7 +152,7 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* CTA */}
+       
         <Link
           href="/contact"
           className="hidden md:inline-flex items-center px-5 py-2.5 rounded-xl
@@ -68,7 +166,7 @@ export default function Navbar() {
     </header>
   );
 }
-
+*/
 
 /*
 "use client";

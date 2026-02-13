@@ -22,7 +22,7 @@ export default function WorkPreview() {
             Selected <span className="text-purple-400">Work</span>
           </h2>
           <p className="mt-2 text-gray-400 max-w-md">
-            A few products and systems I’ve worked on
+           Products and systems I’ve worked on.
           </p>
         </div>
 

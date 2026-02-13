@@ -2,12 +2,15 @@ import Link from "next/link";
 export default function CreativeGarmentsCard() {
   return (
     <article
-      className="
+        className="
         relative overflow-hidden
         rounded-2xl border border-white/10
         bg-black/70 backdrop-blur
         p-6 md:p-8 space-y-6
+        transition-all duration-200
+        hover:scale-101 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]
       "
+    
     >
       {/* Title + role */}
       <header className="space-y-2">
@@ -16,13 +19,14 @@ export default function CreativeGarmentsCard() {
         </h3>
 
         <p className="text-sm md:text-base text-purple-400 font-medium">
-          Product Analyst / System Designer&nbsp;&nbsp;|&nbsp;&nbsp;Design → Implementation → Adoption
+          Product Analyst &nbsp;&nbsp;|&nbsp;&nbsp;Design → Implementation → Adoption
         </p>
       </header>
 
       {/* Product description */}
       <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-        Designed a real-time production tracking system that helped management identify bottlenecks, sync the workforce, and improve visibility across garment production lines.
+       <span className="font-semibold text-purple-500">Designed</span>  a real-time
+        <span className="font-semibold text-purple-500"> production tracking system </span>that helped management identify bottlenecks, sync the workforce, and improve visibility across garment production lines.
       </p>
 
       {/* Product Impact Box */}
@@ -46,12 +50,12 @@ export default function CreativeGarmentsCard() {
 
           {/* Top Right: Annual cost savings */}
           <div className="space-y-1">
-            <p className="text-sm text-gray-300">Annual cost savings</p>
-            <p className="text-4xl md:text-5xl font-bold text-white">₹2M+</p>
+            <p className="text-sm text-gray-300">Annual Production cost savings</p>
+            <p className="text-4xl md:text-5xl font-bold text-white">₹25L+</p>
           </div>
-
+      
           {/* Bottom Left: Production visibility */}
-          <div className="space-y-3">
+        {/* <div className="space-y-3">
             <p className="text-sm text-gray-300">Production visibility</p>
             <div className="flex flex-wrap gap-3">
               <button
@@ -85,15 +89,15 @@ export default function CreativeGarmentsCard() {
                 Centralized monitoring
               </button>
             </div>
-          </div>
+          </div>*/}
 
           {/* Bottom Right: Current status */}
-          <div className="space-y-1">
+          {/*<div className="space-y-1">
             <p className="text-sm text-gray-300">Current status</p>
             <p className="text-lg md:text-xl font-bold text-purple-400">Live &amp; scaling 🚀</p>
-          </div>
-        </div>
-      </section>
+          </div>*/}
+        </div>*
+      </section> 
 
       {/* Key Deliverables */}
       <section className="pt-4 border-t border-white/10">
@@ -111,7 +115,8 @@ export default function CreativeGarmentsCard() {
                   Problem analysis &amp; system design
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Mapped production flow, identified gaps, and designed a solution aligned with shop-floor realities.
+                  <span className="font-semibold text-purple-500"> Mapped production flow,</span> identified gaps, 
+                  and designed a solution aligned with shop-floor realities.
                 </p>
               </div>
             </div>
@@ -126,7 +131,7 @@ export default function CreativeGarmentsCard() {
                   Operational visibility &amp; workforce sync
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Enabled real-time tracking at each machine level to surface delays and balance workload dynamically.
+                  <span className="font-semibold text-purple-500">Enabled real-time tracking</span> at each machine level to surface delays and balance workload dynamically.
                 </p>
               </div>
             </div>
@@ -141,7 +146,7 @@ export default function CreativeGarmentsCard() {
                   Execution &amp; adoption
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Built a lightweight employee interface and an admin dashboard to ensure ease of use and daily adoption.
+                  <span className="font-semibold text-purple-500">Built a lightweight employee interface and an admin dashboard</span> to ensure ease of use and daily adoption.
                 </p>
               </div>
             </div>
@@ -150,20 +155,20 @@ export default function CreativeGarmentsCard() {
       </section>
 
       {/* CTA */}
-      <div className="pt-2">
-  <Link href="/work/creativegarment">
-    <button 
-      type="button" 
-      className=" inline-flex items-center justify-center
-            rounded-xl px-5 py-2.5
-            bg-purple-600 text-white text-sm font-semibold
-            hover:bg-purple-700 hover:shadow-[0_0_18px_rgba(168,85,247,0.45)]
-            transition-all duration-200"
-    >
-      View full case study
-    </button>
-  </Link>
-</div>
+    <div className="pt-4 flex justify-center">
+        <Link href="/work/creativegarment">
+          <button 
+            type="button" 
+            className="inline-flex items-center justify-center
+                  rounded-xl px-5 py-2.5
+                  bg-purple-600 text-white text-sm font-semibold
+                  hover:bg-purple-800 
+                  transition-all duration-200"
+          >
+            View full case study
+          </button>
+        </Link>
+      </div>
     </article>
   );
 }

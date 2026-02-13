@@ -164,7 +164,7 @@ export default function HieeOneShopCard() {
             className="inline-flex items-center justify-center
                   rounded-xl px-5 py-2.5
                   bg-purple-600 text-white text-sm font-semibold
-                  hover:bg-purple-700 hover:shadow-[0_0_18px_rgba(168,85,247,0.45)]
+                  hover:bg-purple-800
                   transition-all duration-200"
           >
             View full case study

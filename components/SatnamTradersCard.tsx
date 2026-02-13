@@ -7,22 +7,25 @@ export default function SatnamTradersCard() {
         rounded-2xl border border-white/10
         bg-black/70 backdrop-blur
         p-6 md:p-8 space-y-6
+        transition-all duration-200
+        hover:scale-101 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]
       "
     >
       {/* Title + role */}
       <header className="space-y-2">
         <h3 className="text-xl md:text-2xl font-semibold text-white">
-          Satnam Traders — B2B Product Showcase &amp; Order Management System
+          ST Brands — B2B Product Showcase &amp; Order Management System
         </h3>
 
         <p className="text-sm md:text-base text-purple-400 font-medium">
-          B2B Solutions Architect&nbsp;&nbsp;|&nbsp;&nbsp;Structure → Sync → Scale
+          B2B Solutions Architect&nbsp;&nbsp;
         </p>
       </header>
 
       {/* Product description */}
       <p className="text-sm md:text-base text-gray-300 leading-relaxed">
-        Structured B2B product showcasing and order handling for a large sales team, improving visibility and reducing missed enquiries.
+        <span className="font-semibold text-purple-500"> Structured B2B product showcasing </span>and order handling for a large sales team, improving visibility and 
+        <span className="font-semibold text-purple-500"> reducing missed enquiries</span>.
       </p>
 
       {/* Product Impact Box */}
@@ -39,59 +42,15 @@ export default function SatnamTradersCard() {
         {/* 2x2 Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Top Left: Sales team sync */}
-          <div className="space-y-1">
-            <p className="text-sm text-gray-300">Sales team status</p>
-            <p className="text-4xl md:text-5xl font-bold text-white">100%</p>
-          </div>
-
-          {/* Top Right: Lost enquiries saved */}
-          <div className="space-y-1">
-            <p className="text-sm text-gray-300">Enquiries recovered</p>
+           <div className="space-y-1">
+            <p className="text-sm text-gray-300">Potential revenue loss saved </p>
             <p className="text-4xl md:text-5xl font-bold text-white">₹1.5-2 Cr</p>
           </div>
-
-          {/* Bottom Left: Supervision capabilities */}
-          <div className="space-y-3">
-            <p className="text-sm text-gray-300">Supervision system</p>
-            <div className="flex flex-wrap gap-3">
-              <button
-                type="button"
-                className="
-                  inline-flex items-center gap-2
-                  px-4 py-2
-                  bg-white border border-purple-500
-                  text-purple-600 text-sm font-semibold
-                  rounded-lg
-                  hover:bg-purple-50 hover:border-purple-600
-                  transition-all duration-200
-                "
-              >
-                <div className="w-4 h-4 bg-purple-600 rounded-sm" />
-                Dashboard
-              </button>
-              <button
-                type="button"
-                className="
-                  inline-flex items-center gap-2
-                  px-4 py-2
-                  bg-white border border-purple-500
-                  text-purple-600 text-sm font-semibold
-                  rounded-lg
-                  hover:bg-purple-50 hover:border-purple-600
-                  transition-all duration-200
-                "
-              >
-                <div className="w-4 h-4 bg-purple-600 rounded-sm" />
-                Real-time tracking
-              </button>
-            </div>
-          </div>
-
-          {/* Bottom Right: Current status */}
           <div className="space-y-1">
-            <p className="text-sm text-gray-300">Current status</p>
-            <p className="text-lg md:text-xl font-bold text-purple-400">Active &amp; scaling 🚀</p>
+            <p className="text-sm text-gray-300">Enabled centralized</p>
+            <p className="text-2xl md:text-3xl font-bold text-white">Management Oversight</p>
           </div>
+         
         </div>
       </section>
 
@@ -111,7 +70,8 @@ export default function SatnamTradersCard() {
                   Catalog centralization &amp; team sync
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Digitized the full product catalog and ensured all sales employees stayed updated through a single source of truth.
+                  <span className="font-semibold text-purple-400">Digitized </span> the full product catalog and ensured all sales employees stayed
+                   <span className="font-semibold text-purple-400"> updated </span> through a <span className="font-semibold text-purple-400"> single source of truth.</span>
                 </p>
               </div>
             </div>
@@ -126,7 +86,8 @@ export default function SatnamTradersCard() {
                   Management visibility
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Designed custom admin dashboard for centralized tracking of enquiries, orders, and pendencies with real-time updates.
+                  <span className="font-semibold text-purple-400">Designed </span> custom admin dashboard for <span className="font-semibold text-purple-400"> centralized tracking </span>
+                   of enquiries, orders, and pendencies with <span className="font-semibold text-purple-400">real-time updates</span>.
                 </p>
               </div>
             </div>
@@ -141,7 +102,8 @@ export default function SatnamTradersCard() {
                   Sales enablement &amp; adoption
                 </p>
                 <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-                  Built an intuitive mobile and web interface for the sales team to manage orders, access catalog, and track enquiries seamlessly.
+                  <span className="font-semibold text-purple-400">Built an intuitive </span> mobile
+                   and web <span className="font-semibold text-purple-400"> interface</span> for the sales team to manage orders, access catalog, and track enquiries seamlessly.
                 </p>
               </div>
             </div>
@@ -150,18 +112,18 @@ export default function SatnamTradersCard() {
       </section>
 
       {/* CTA */}
-      <div className="pt-2">
+      <div className="pt-4 flex justify-center">
   <Link href="/work/satnamtrader">
-    <button 
-      type="button" 
-      className=" inline-flex items-center justify-center
-            rounded-xl px-5 py-2.5
-            bg-purple-600 text-white text-sm font-semibold
-            hover:bg-purple-700 hover:shadow-[0_0_18px_rgba(168,85,247,0.45)]
-            transition-all duration-200"
-    >
-      View full case study
-    </button>
+      <button 
+            type="button" 
+            className="inline-flex items-center justify-center
+                  rounded-xl px-5 py-2.5
+                  bg-purple-600 text-white text-sm font-semibold
+                  hover:bg-purple-800 
+                  transition-all duration-200"
+          >
+            View full case study
+          </button>
   </Link>
 </div>
     </article>

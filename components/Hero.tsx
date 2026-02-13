@@ -77,6 +77,16 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <div className="relative max-w-7xl mx-auto px-3 py-8 md:py-12">
+        <div className="max-w-3xl">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed ">
+            I believe good products are built through clear thinking, team collaboration, and thoughtful execution.
+          </p>
+          <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-400 leading-relaxed">
+            Here are a few examples of how I apply that in real work.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

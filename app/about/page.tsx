@@ -1,3 +1,6 @@
+import Link from "next/dist/client/link";
+import { ArrowRight } from 'lucide-react'
+
 export default function AboutPage() {
   return (
     <main className="bg-black text-white min-h-screen">
@@ -16,8 +19,8 @@ export default function AboutPage() {
       </section>
 
       {/* Content Sections */}
-      <section className="py-8 md:py-16">
-        <div className="max-w-5xl mx-auto px-6 space-y-8">
+      <section className="py-0 ">
+        <div className="max-w-5xl mx-auto px-6 space-y-4">
           
           {/* 1. How I Work as a Product Manager */}
           <article className="rounded-2xl border border-white/10 bg-black/70 backdrop-blur p-6 md:p-8">
@@ -125,6 +128,44 @@ export default function AboutPage() {
           </article>
 
         </div>
+        </section>
+
+       
+       <section className="py-16 md:py-24 bg-black">
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Main Card */}
+        <article className="rounded-2xl border border-white/10 bg-gradient-to-br from-purple-950/10 to-transparent backdrop-blur p-8 md:p-12 text-center space-y-8">
+          
+          {/* Content */}
+          <div className="space-y-6">
+           
+   
+            <div className="space-y-4 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+               I’m someone who's eager to learn, adapts to new environments, and believes improvement never stops.
+              </p>
+              
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+               If you value growth and collaboration, I’d be happy to connect.
+               </p>
+            </div>
+
+    
+          </div>
+
+          {/* CTA Button */}
+          <div className="pt-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-semibold text-lg transition-all duration-200"
+            >
+              Get in Touch
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+        </article>
+      </div>
+    
       </section>
 
       {/* Footer spacing */}

@@ -6,21 +6,7 @@ import Link from 'next/link'
 export default function CaseStudy() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold">Shivam Somya</h1>
-          <div className="flex items-center gap-8">
-            <a href="#" className="text-gray-400 hover:text-white transition">Home</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">Work</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">About</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">Contact</a>
-            <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition">
-              Let's Talk
-            </button>
-          </div>
-        </div>
-      </nav>
+    
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 max-w-6xl mx-auto">
@@ -31,10 +17,10 @@ export default function CaseStudy() {
           <h1 className="text-6xl font-bold mb-6 leading-tight">
             Creative Garments
             <br />
-            <span className="text-gray-400">Workforce Synchronization & Production Visibility</span>
+            <span className="text-gray-400">Workforce Synchronization & Production Visibility system</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl leading-relaxed mb-8">
-            Building a real-time production tracking system that unified workforce coordination across manufacturing lines, bringing visibility to shop-floor operations while keeping the system simple for non-technical workers.
+            Built a real-time production tracking system that unified workforce coordination across manufacturing lines, bringing visibility to shop-floor operations while keeping the system simple for non-technical workers.
           </p>
         </div>
 
@@ -42,11 +28,11 @@ export default function CaseStudy() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
             <p className="text-gray-400 text-sm mb-2">Role</p>
-            <p className="text-2xl font-bold">Product & Process Lead</p>
+            <p className="text-2xl font-bold">Product analyst</p>
           </div>
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
             <p className="text-gray-400 text-sm mb-2">Stage</p>
-            <p className="text-2xl font-bold">0 → System → Scale</p>
+            <p className="text-2xl font-bold">Deployed</p>
           </div>
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
             <p className="text-gray-400 text-sm mb-2">Efficiency Gain</p>
@@ -54,7 +40,7 @@ export default function CaseStudy() {
           </div>
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
             <p className="text-gray-400 text-sm mb-2">Cost Savings</p>
-            <p className="text-2xl font-bold">₹2M</p>
+            <p className="text-2xl font-bold">₹25L+/Yr</p>
           </div>
         </div>
       </section>
@@ -86,7 +72,7 @@ export default function CaseStudy() {
           <div>
             <h3 className="text-purple-400 font-semibold text-sm mb-4 uppercase tracking-wide">The Solution</h3>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              Designed a simple real-time production tracking system that allowed workers to log output with a single tap at each workstation, automatically synchronizing the entire line. Paired with an admin dashboard providing live visibility, supervisors could now identify bottlenecks during operations and intervene immediately.
+              Designed a simple real-time production tracking system that allowed workers to log output with a single tap after each completion, automatically synchronizing the entire line. Paired with an admin dashboard providing live visibility, supervisors could now identify bottlenecks during operations and intervene immediately.
             </p>
             <div className="bg-gradient-to-br from-purple-600/20 to-transparent border border-purple-500/30 rounded-lg p-6">
               <p className="text-gray-300 italic">
@@ -234,7 +220,7 @@ export default function CaseStudy() {
           </div>
           <div className="border border-white/10 rounded-lg p-8 bg-gradient-to-br from-white/5 to-transparent text-center">
             <p className="text-purple-400 text-sm font-semibold uppercase tracking-wide mb-3">Cost Savings</p>
-            <p className="text-3xl font-bold mb-2">₹2M</p>
+            <p className="text-3xl font-bold mb-2">₹25L+</p>
             <p className="text-gray-300">Annual production cost reduction</p>
           </div>
           <div className="border border-white/10 rounded-lg p-8 bg-gradient-to-br from-white/5 to-transparent text-center">
@@ -289,17 +275,49 @@ export default function CaseStudy() {
 
       {/* CTA Section */}
       <section className="px-6 max-w-6xl mx-auto py-20 border-t border-white/10">
-        <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">This Is How I Work</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            I'm passionate about building products that solve real problems, scaling teams with clarity, and shipping with confidence. Let's create something great together.
-          </p>
-          <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition flex items-center gap-2 mx-auto">
-            Start a Conversation
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
+  <div className="text-center">
+    
+    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      This Is How I Work
+    </h2>
+
+    <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+      I'm passionate about building products that solve real problems, scaling teams with clarity, and shipping with confidence. Let's create something great together.
+    </p>
+
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      
+      {/* Primary Button */}
+      <Link
+        href="/contact"
+        className="bg-gradient-to-r from-purple-600 to-purple-700
+                   hover:from-purple-500 hover:to-purple-600
+                   text-white px-8 py-4 rounded-lg
+                   font-semibold text-lg
+                   transition-all duration-300
+                   flex items-center gap-2"
+      >
+        Start a Conversation
+        <ArrowRight className="w-5 h-5" />
+      </Link>
+
+      {/* Secondary Button */}
+      <Link
+        href="/work/satnamtrader"   // Replace with actual next work slug
+        className="border border-purple-500/40
+                   text-purple-400
+                   px-8 py-4 rounded-lg
+                   font-semibold text-lg
+                   hover:bg-purple-600/10
+                   transition-all duration-300"
+      >
+        View Another Work
+      </Link>
+
+    </div>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="border-t border-white/10 px-6 py-12 mt-12">

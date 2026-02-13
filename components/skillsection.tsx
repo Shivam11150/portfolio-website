@@ -100,11 +100,11 @@ export default function SkillsSection() {
   const displayedSkills = isExpanded ? skillsData : skillsData.slice(0, 2)
 
   return (
-    <section className="py-16 md:py-24 bg-black">
+    <section className="py-8 md:py-12 bg-black">
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
             Skills &{' '}
             <span className="text-purple-400">Capabilities</span>
           </h2>
@@ -206,9 +206,9 @@ export default function SkillsSection() {
             onClick={() => setIsExpanded(!isExpanded)}
             className="flex items-center gap-2 px-6 py-3 rounded-lg border border-purple-900/30 text-purple-400 hover:bg-purple-950/25 transition-colors font-semibold"
           >
-            {isExpanded ? 'Show Less' : 'Show All Skills'}
+            {isExpanded ? 'Show Less' : 'Show More Skills'}
             <ChevronDown
-              size={20}
+              size={20} 
               className={`transition-transform ${isExpanded ? 'rotate-180' : ''}`}
             />
           </button>

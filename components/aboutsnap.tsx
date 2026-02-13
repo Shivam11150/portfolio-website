@@ -5,12 +5,12 @@ import { ArrowRight } from 'lucide-react'
 
 export default function AboutSnap() {
   return (
-    <section className="py-16 md:py-24 bg-black">
+    <section className="py-8 md:py-5 bg-black">
       <div className="max-w-5xl mx-auto px-6">
         {/* Section Header */}
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
-            About <span className="text-purple-400">Me</span>
+             <span className="text-white">About </span><span className="text-purple-400">Me</span>
           </h2>
         </div>
 
@@ -23,10 +23,10 @@ export default function AboutSnap() {
           </p>
 
           {/* CTA */}
-          <div className="mt-6">
+          <div className="flex justify-center mt-6">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-purple-900/30 text-purple-400 hover:bg-purple-950/25 transition-colors font-semibold"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-purple-900/30 text-purple-400 hover:bg-purple-950/50 transition-colors font-semibold"
             >
               Know more  
               <ArrowRight size={18} />

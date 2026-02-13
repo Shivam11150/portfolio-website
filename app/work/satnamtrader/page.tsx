@@ -6,22 +6,7 @@ import Link from 'next/link'
 export default function CaseStudy() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold">Shivam Somya</h1>
-          <div className="flex items-center gap-8">
-            <a href="#" className="text-gray-400 hover:text-white transition">Home</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">Work</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">About</a>
-            <a href="#" className="text-gray-400 hover:text-white transition">Contact</a>
-            <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition">
-              Let's Talk
-            </button>
-          </div>
-        </div>
-      </nav>
-
+      
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 max-w-6xl mx-auto">
         <div className="mb-8">
@@ -42,19 +27,19 @@ export default function CaseStudy() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
             <p className="text-gray-400 text-sm mb-2">Role</p>
-            <p className="text-2xl font-bold">Product Manager</p>
+            <p className="text-2xl font-bold">Solution Architect</p>
           </div>
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
-            <p className="text-gray-400 text-sm mb-2">Domain</p>
+            <p className="text-gray-400 text-sm mb-2">Client Domain</p>
             <p className="text-2xl font-bold">Footwear Import & Retail</p>
           </div>
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
-            <p className="text-gray-400 text-sm mb-2">Customers</p>
+            <p className="text-gray-400 text-sm mb-2">Client's Customer</p>
             <p className="text-2xl font-bold">6,000+</p>
           </div>
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
-            <p className="text-gray-400 text-sm mb-2">Location</p>
-            <p className="text-2xl font-bold">Karol Bagh, Delhi</p>
+            <p className="text-gray-400 text-sm mb-2">Sales Recovered</p>
+            <p className="text-2xl font-bold">₹1.2Cr+</p>
           </div>
         </div>
       </section>
@@ -66,7 +51,7 @@ export default function CaseStudy() {
           <div>
             <h3 className="text-purple-400 font-semibold text-sm mb-4 uppercase tracking-wide">The Problem</h3>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              ST Brands, a footwear importer and large-format retailer, relied heavily on WhatsApp for product discovery and order handling. Sales were relationship-driven across field and inside teams, causing inconsistent product sharing, missed enquiries, and limited managerial visibility as the B2B customer base scaled.
+              ST Brands, a footwear importer and large-format retailer located at Karol bagh, Delhi. Relied heavily on WhatsApp for product discovery and order handling. Sales were relationship-driven across field and inside teams, causing inconsistent product sharing, missed enquiries, and limited managerial visibility as the B2B customer base scaled.
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
@@ -289,17 +274,48 @@ export default function CaseStudy() {
 
       {/* CTA Section */}
       <section className="px-6 max-w-6xl mx-auto py-20 border-t border-white/10">
-        <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">This Is How I Work</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            I'm passionate about building products that solve real problems, scaling teams with clarity, and shipping with confidence. Let's create something great together.
-          </p>
-          <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition flex items-center gap-2 mx-auto">
-            Start a Conversation
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
+  <div className="text-center">
+    
+    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      This Is How I Work
+    </h2>
+
+    <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+      I'm passionate about building products that solve real problems, scaling teams with clarity, and shipping with confidence. Let's create something great together.
+    </p>
+
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      
+      {/* Primary Button */}
+      <Link
+        href="/contact"
+        className="bg-gradient-to-r from-purple-600 to-purple-700
+                   hover:from-purple-500 hover:to-purple-600
+                   text-white px-8 py-4 rounded-lg
+                   font-semibold text-lg
+                   transition-all duration-300
+                   flex items-center gap-2"
+      >
+        Start a Conversation
+        <ArrowRight className="w-5 h-5" />
+      </Link>
+
+      {/* Secondary Button */}
+      <Link
+        href="/work/kishanmitra"   // Replace with actual next work slug
+        className="border border-purple-500/40
+                   text-purple-400
+                   px-8 py-4 rounded-lg
+                   font-semibold text-lg
+                   hover:bg-purple-600/10
+                   transition-all duration-300"
+      >
+        View Another Work
+      </Link>
+
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="border-t border-white/10 px-6 py-12 mt-12">
