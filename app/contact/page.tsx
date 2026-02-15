@@ -39,10 +39,10 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="bg-black text-white min-h-screen w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="py-4 md:py-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold">
               Get in <span className="text-purple-400">Touch</span>
@@ -55,9 +55,9 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-8 md:py-16">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-8">
+      <section className="py-4 md:py-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8">
             
             {/* Form Card */}
             <div className="rounded-2xl border border-white/10 bg-black/70 backdrop-blur p-8 space-y-6">
@@ -76,7 +76,7 @@ export default function ContactPage() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-purple-950/20 border border-purple-900/30 text-white placeholder-gray-500 focus:outline-none focus:border-purple-400 focus:bg-purple-950/40 transition-all duration-200"
-                    placeholder="Your name"
+                    placeholder="Hi ! What should I call you?"
                     required
                   />
                 </div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-purple-950/20 border border-purple-900/30 text-white placeholder-gray-500 focus:outline-none focus:border-purple-400 focus:bg-purple-950/40 transition-all duration-200"
-                    placeholder="your@email.com"
+                    placeholder="Drop your email — I’ll reply here"
                     required
                   />
                 </div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-purple-950/20 border border-purple-900/30 text-white placeholder-gray-500 focus:outline-none focus:border-purple-400 focus:bg-purple-950/40 transition-all duration-200 resize-none"
-                    placeholder="Tell me more about your idea or opportunity..."
+                    placeholder="Tell me how I can help..."
                     rows={5}
                     required
                   />
@@ -136,23 +136,23 @@ export default function ContactPage() {
 
               {/* Email Contact */}
               <a
-                href="mailto:your@email.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=shivamsomya.pm@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-lg border border-white/10 hover:bg-purple-950/20 hover:border-purple-900/50 transition-all duration-200 group"
               >
                 <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-purple-950/25 flex items-center justify-center border border-purple-900/30 group-hover:bg-purple-950/40">
                   <Mail size={24} className="text-purple-400" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-wide">Email</p>
-                  <p className="text-base font-semibold text-white hover:text-purple-400 transition-colors">
-                    your@email.com
+                  <p className="text-xs text-gray-400  tracking-wide">Email</p>
+                  <p className="text-xs sm:text-sm md:text-base font-semibold text-white group-hover:text-purple-400 transition-colors">
+                    shivamsomya.pm@gmail.com
                   </p>
                 </div>
               </a>
 
               {/* LinkedIn Contact */}
               <a
-                href="https://linkedin.com"
+                href= "https://www.linkedin.com/in/shivamsomya?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-lg border border-white/10 hover:bg-purple-950/20 hover:border-purple-900/50 transition-all duration-200 group"
@@ -161,9 +161,9 @@ export default function ContactPage() {
                   <Linkedin size={24} className="text-purple-400" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-wide">LinkedIn</p>
-                  <p className="text-base font-semibold text-white hover:text-purple-400 transition-colors">
-                    linkedin.com/in/yourprofile
+                  <p className="text-xs text-gray-400  tracking-wide">LinkedIn</p>
+                  <p className="text-xs sm:text-sm md:text-base font-semibold text-white group-hover:text-purple-400 transition-colors">
+                    linkedin.com/in/shivamsomya
                   </p>
                 </div>
               </a>
@@ -171,7 +171,7 @@ export default function ContactPage() {
               {/* Quick response note */}
               <div className="border-t border-white/10 pt-6">
                 <p className="text-sm text-gray-400">
-                  💡 <span className="text-gray-300">I typically respond within 24-48 hours. Looking forward to connecting!</span>
+                  💡 <span className="text-gray-300">I typically respond ASAP. It was a pleasure connecting with you — looking forward to staying in touch.</span>
                 </p>
               </div>
             </div>

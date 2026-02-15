@@ -9,12 +9,13 @@ export default function CaseStudy() {
      
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 max-w-6xl mx-auto">
+      <section className="pt-4 sm:pt-8 md:pt-24 pb-12 sm:pb-16 px-5 sm:px-6 max-w-6xl mx-auto">
+
         <div className="mb-8">
           <span className="inline-block bg-purple-600/20 border border-purple-500/50 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
             Case Study
           </span>
-          <h1 className="text-6xl font-bold mb-6 leading-tight">
+           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Kishan Mitro
             <br />
             <span className="text-gray-400">Multi-Branch Inventory & Sales Enablement System</span>
@@ -28,7 +29,7 @@ export default function CaseStudy() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
             <p className="text-gray-400 text-sm mb-2">Role</p>
-            <p className="text-2xl font-bold">Solution Artitect</p>
+            <p className="text-2xl font-bold">Solution Architect</p>
           </div>
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
             <p className="text-gray-400 text-sm mb-2">Users</p>

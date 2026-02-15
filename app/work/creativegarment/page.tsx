@@ -9,13 +9,13 @@ export default function CaseStudy() {
     
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 max-w-6xl mx-auto">
+      <section className="pt-4 sm:pt-8 md:pt-24 pb-12 sm:pb-16 px-5 sm:px-6 max-w-6xl mx-auto">
         <div className="mb-8">
           <span className="inline-block bg-purple-600/20 border border-purple-500/50 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
             Case Study
           </span>
-          <h1 className="text-6xl font-bold mb-6 leading-tight">
-            Creative Garments
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Creative Garments Pvt Ltd.
             <br />
             <span className="text-gray-400">Workforce Synchronization & Production Visibility system</span>
           </h1>
@@ -52,7 +52,7 @@ export default function CaseStudy() {
           <div>
             <h3 className="text-purple-400 font-semibold text-sm mb-4 uppercase tracking-wide">The Problem</h3>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              Creative Garments, an authorized manufacturer for global brands like H&M and Levi's, faced critical operational bottlenecks. With 60 machines per production line and strict sequential workflows, one slow worker directly impacted the entire line. Management had no real-time visibility into where delays occurred, and daily targets were missed without clear insight into root causes.
+              Creative Garments Pvt. Ltd, an authorized manufacturer for global brands like H&M and Levi's in Ranchi, Jharkhand , faced critical operational bottlenecks. With 60 machines per production line and strict sequential workflows, one slow worker directly impacted the entire line. Management had no real-time visibility into where delays occurred, and daily targets were missed without clear insight into root causes.
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
