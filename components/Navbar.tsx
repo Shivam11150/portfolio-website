@@ -1,15 +1,20 @@
 
+
+
 "use client";
+
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -18,15 +23,18 @@ export default function Navbar() {
     { name: "Contact", href: "/contact" },
   ];
 
+
   // Scroll detection
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <header
@@ -39,6 +47,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
 
+
         {/* Logo */}
         <Link
           href="/"
@@ -47,6 +56,7 @@ export default function Navbar() {
           Shivam Somya<span className="text-purple-500">.</span>
         </Link>
 
+
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => {
@@ -54,6 +64,7 @@ export default function Navbar() {
               item.href === "/"
                 ? pathname === "/"
                 : pathname.startsWith(item.href);
+
 
             return (
               <Link
@@ -71,6 +82,7 @@ export default function Navbar() {
           })}
         </nav>
 
+
         {/* CTA */}
         <Link
           href="/contact"
@@ -82,14 +94,45 @@ export default function Navbar() {
           Let’s Talk
         </Link>
 
+
         {/* Mobile Hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white"
-        >
+          className="md:hidden text-white transition-transform duration-300"
+         >
+            <div className={`transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}> </div>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
+             
         </button>
       </div>
+      {/* Mobile Menu */}
+{isOpen && (
+  <div className="md:hidden absolute top-16 left-0 w-full bg-black border-t border-purple-500/30 z-40">
+    <nav className="flex flex-col p-6 gap-6">
+      {navItems.map((item) => (
+        <Link
+          key={item.name}
+          href={item.href}
+          onClick={() => setIsOpen(false)}
+          className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+        >
+          {item.name}
+        </Link>
+      ))}
+
+
+      <Link
+        href="/contact"
+        onClick={() => setIsOpen(false)}
+        className="mt-4 inline-flex items-center justify-center px-5 py-2.5 rounded-xl
+                   bg-purple-600 text-white text-sm font-semibold
+                   hover:bg-purple-800 transition-colors duration-300"
+      >
+        Let’s Talk
+      </Link>
+    </nav>
+  </div>
+)}
     </header>
   );
 }
