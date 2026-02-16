@@ -31,7 +31,7 @@ export default function CaseStudy() {
           </div>
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
             <p className="text-gray-400 text-sm mb-2">Client Domain</p>
-            <p className="text-2xl font-bold">Footwear Import & Retail</p>
+           <p className="text-2xl font-bold">Footwear Importer & Supplier</p>
           </div>
           <div className="border border-white/10 rounded-lg p-6 bg-gradient-to-br from-white/5 to-transparent">
             <p className="text-gray-400 text-sm mb-2">Client's Customer</p>
@@ -51,7 +51,7 @@ export default function CaseStudy() {
           <div>
             <h3 className="text-purple-400 font-semibold text-sm mb-4 uppercase tracking-wide">The Problem</h3>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              ST Brands, a footwear importer and large-format retailer located at Karol bagh, Delhi. Relied heavily on WhatsApp for product discovery and order handling. Sales were relationship-driven across field and inside teams, causing inconsistent product sharing, missed enquiries, and limited managerial visibility as the B2B customer base scaled.
+              ST Brands, a footwear importer and large-format retailer located at Karol Bagh, Delhi. Relied heavily on WhatsApp for product discovery and order handling. Sales were relationship-driven across field and inside teams, causing inconsistent product sharing, missed enquiries, and limited managerial visibility as the B2B customer base scaled.
             </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">

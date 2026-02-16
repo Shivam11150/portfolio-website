@@ -1,5 +1,6 @@
 import Link from "next/dist/client/link";
 import { ArrowRight } from 'lucide-react'
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -16,6 +17,7 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+         
       </section>
 
       {/* Content Sections */}

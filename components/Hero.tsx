@@ -59,25 +59,26 @@ export default function Hero() {
         </div>
 
         {/* RIGHT: IMAGE */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative w-full max-w-md aspect-square">
+        <div className="w-full md:w-1/2 flex justify-end md:pr-6 md:justify-items-start">
+          <div className="relative w-full max-w-sm">
             
             {/* Controlled glow */}
             <div className="absolute inset-0 bg-purple-700/30 rounded-3xl blur-2xl" />
 
             <Image
-              src="/images/myphoto.png"
-              alt="Shivam Somya"
-              width={360}
-              height={360}
+              src="/images/heroimage.png"
+              alt="My workingspace"
+              width={1200}
+              height={1600}
+              quality ={100}
               priority
-              className="relative w-full h-full object-cover rounded-3xl
-                         border border-purple-500/20"
+              className="relative w-full h-auto object-contain 
+              rounded-3xl border border-purple-500/20"
             />
           </div>
         </div>
       </div>
-      <div className="relative max-w-7xl mx-auto px-3 py-8 md:py-12">
+      <div className="relative max-w-7xl mx-auto px-3 py-4 md:py-6">
         <div className="max-w-3xl">
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed ">
             I believe good products are built through clear thinking, team collaboration, and thoughtful execution.
