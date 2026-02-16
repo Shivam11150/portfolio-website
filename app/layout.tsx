@@ -2,6 +2,7 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
+
 export default function RootLayout({
   children,
 }: {
@@ -12,6 +13,7 @@ export default function RootLayout({
       <body className="bg-background text-textMain min-h-screen">
         <Navbar />
         {children}
+    
       </body>
     </html>
   );

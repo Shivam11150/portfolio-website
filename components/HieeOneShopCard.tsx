@@ -62,7 +62,7 @@ export default function HieeOneShopCard() {
   <div className="flex flex-wrap gap-4">
 
     {/* Play Store */}
-    <Link href="https://play.google.com" target="_blank">
+    
       <div className="hover:opacity-80 transition-all duration-200">
         <Image
           src="/images/store/playstore.png"
@@ -72,10 +72,10 @@ export default function HieeOneShopCard() {
           className="object-contain"
         />
       </div>
-    </Link>
+    
 
     {/* App Store */}
-    <Link href="https://apps.apple.com" target="_blank">
+    
       <div className="hover:opacity-80 transition-all duration-200">
         <Image
           src="/images/store/appstore.png"
@@ -85,7 +85,7 @@ export default function HieeOneShopCard() {
           className="object-contain"
         />
       </div>
-    </Link>
+    
 
   </div>
 </div>
@@ -165,6 +165,8 @@ export default function HieeOneShopCard() {
                   rounded-xl px-5 py-2.5
                   bg-purple-600 text-white text-sm font-semibold
                   hover:bg-purple-800
+                  active:scale-95 
+                  active:bg-purple-500/20
                   transition-all duration-200"
           >
             View full case study

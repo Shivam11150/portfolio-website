@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-purple-950 opacity-50" />
 
-      <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-32 flex flex-col md:flex-row items-center justify-between gap-20 min-h-[90vh]">
+      <div className="relative max-w-7xl mx-auto px-6 py-8 md:py-32 flex flex-col md:flex-row items-center justify-between gap-20 min-h-[90vh]">
         
         {/* LEFT: TEXT */}
         <div className="w-full md:w-1/2 space-y-7">
@@ -39,10 +39,12 @@ export default function Hero() {
             <Link
               href="/contact"
               className="px-7 py-3.5 rounded-xl bg-purple-600 text-white font-semibold
-                         hover:bg-purple-700 hover:shadow-[0_0_25px_rgba(168,85,247,0.4)]
+                         hover:bg-purple-700 hover:
+                         active:scale-95 
+                         active:bg-purple-500/20
                          transition-all duration-200"
             >
-              Contact me
+              Let's Talk
             </Link>
 
             {/* Secondary CTA */}
@@ -51,6 +53,8 @@ export default function Hero() {
               className="px-7 py-3.5 rounded-xl border border-purple-500/60
                          text-purple-400 font-semibold
                          hover:bg-purple-500/10 hover:text-white
+                         active:scale-95 
+                         active:bg-purple-500/20
                          transition-all duration-200"
             >
               Learn more

@@ -120,6 +120,8 @@ export default function KishanMitroCard() {
                   rounded-xl px-5 py-2.5
                   bg-purple-600 text-white text-sm font-semibold
                   hover:bg-purple-800 
+                  active:scale-95 
+                   active:bg-purple-500/20
                   transition-all duration-200"
           >
             View full case study

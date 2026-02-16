@@ -155,23 +155,45 @@ export default function AboutPage() {
     
           </div>
 
-          {/* CTA Button */}
-          <div className="pt-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-semibold text-lg transition-all duration-200"
-            >
-              Get in Touch
-              <ArrowRight size={20} />
-            </Link>
-          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      
+      {/* Primary Button */}
+      <Link
+        href="/contact"
+        className="bg-gradient-to-r from-purple-600 to-purple-700
+                   hover:from-purple-500 hover:to-purple-600
+                   active:scale-95 
+                         active:bg-purple-500/20
+                   text-white px-8 py-4 rounded-lg
+                   font-semibold text-lg
+                   transition-all duration-300
+                   flex items-center gap-2"
+      >
+        Start a Conversation
+        <ArrowRight className="w-5 h-5" />
+      </Link>
+
+      {/* Secondary Button */}
+      <Link
+        href="/#work"   
+        className="border border-purple-500/40
+                   text-purple-400
+                   px-8 py-4 rounded-lg
+                   font-semibold text-lg
+                   hover:bg-purple-600/10
+                   active:scale-95 
+                         active:bg-purple-500/20
+                   transition-all duration-300"
+      >
+        Explore My Works
+      </Link>
+
+    </div>
         </article>
       </div>
     
       </section>
 
-      {/* Footer spacing */}
-      <div className="py-12" />
     </main>
   );
 }

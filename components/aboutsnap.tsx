@@ -26,7 +26,10 @@ export default function AboutSnap() {
           <div className="flex justify-center mt-6">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-purple-900/30 text-purple-400 hover:bg-purple-950/50 transition-colors font-semibold"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-purple-900/30 text-purple-400 hover:bg-purple-950/50 
+              active:scale-95 
+              active:bg-purple-500/20
+              transition-colors font-semibold"
             >
               Know more  
               <ArrowRight size={18} />

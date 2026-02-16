@@ -293,6 +293,8 @@ export default function CaseStudy() {
         href="/contact"
         className="bg-gradient-to-r from-purple-600 to-purple-700
                    hover:from-purple-500 hover:to-purple-600
+                   active:scale-95 
+                         active:bg-purple-500/20
                    text-white px-8 py-4 rounded-lg
                    font-semibold text-lg
                    transition-all duration-300
@@ -310,6 +312,8 @@ export default function CaseStudy() {
                    px-8 py-4 rounded-lg
                    font-semibold text-lg
                    hover:bg-purple-600/10
+                   active:scale-95 
+                         active:bg-purple-500/20
                    transition-all duration-300"
       >
         View Another Work

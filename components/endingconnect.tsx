@@ -33,7 +33,10 @@ export default function EndingConnect() {
           <div className="pt-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white font-semibold text-lg transition-all duration-200"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600
+              active:scale-95 
+                active:bg-purple-500/20
+              text-white font-semibold text-lg transition-all duration-200"
             >
               Get in Touch
               <ArrowRight size={20} />

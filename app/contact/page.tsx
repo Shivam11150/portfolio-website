@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import { Mail, Linkedin, ArrowRight } from "lucide-react";
-
+import Image from "next/image";
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -115,7 +115,10 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 
+                  active:scale-95 
+                         active:bg-purple-500/20
+                  disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                   {!isSubmitting && <ArrowRight size={18} />}
@@ -131,47 +134,63 @@ export default function ContactPage() {
 
               {/* Descriptive text */}
               <p className="text-base text-gray-300 leading-relaxed">
-                If you'd prefer a direct line, here are other ways to reach me:
+                Here are some other ways to reach me..!!
               </p>
 
               {/* Email Contact */}
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=shivamsomya.pm@gmail.com"
-                className="flex items-center gap-4 p-4 rounded-lg border border-white/10 hover:bg-purple-950/20 hover:border-purple-900/50 transition-all duration-200 group"
-              >
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-purple-950/25 flex items-center justify-center border border-purple-900/30 group-hover:bg-purple-950/40">
-                  <Mail size={24} className="text-purple-400" />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400  tracking-wide">Email</p>
-                  <p className="text-xs sm:text-sm md:text-base font-semibold text-white group-hover:text-purple-400 transition-colors">
-                    shivamsomya.pm@gmail.com
-                  </p>
-                </div>
-              </a>
+    <div className="flex items-center gap-3 mt-2">
+  <Image
+      src="/images/gmail.png"
+      alt="Gmail"
+      width={36}
+      height={36}
+      className="object-contain"
+    />
+
+  <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=shivamsomya.pm@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-medium text-sm sm:text-base text-white hover:text-purple-400
+    active:scale-95 
+    
+    transition-colors break-all"
+  >
+    
+    shivamsomya.pm@gmail.com
+  </a>
+</div>
+
+
 
               {/* LinkedIn Contact */}
-              <a
-                href= "https://www.linkedin.com/in/shivamsomya?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-lg border border-white/10 hover:bg-purple-950/20 hover:border-purple-900/50 transition-all duration-200 group"
-              >
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-purple-950/25 flex items-center justify-center border border-purple-900/30 group-hover:bg-purple-950/40">
-                  <Linkedin size={24} className="text-purple-400" />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400  tracking-wide">LinkedIn</p>
-                  <p className="text-xs sm:text-sm md:text-base font-semibold text-white group-hover:text-purple-400 transition-colors">
-                    linkedin.com/in/shivamsomya
-                  </p>
-                </div>
-              </a>
+  <div className="flex items-center gap-3 mt-2">
+  <Image
+      src="/images/linkedin.png"
+      alt="LinkedIn"
+      width={36}
+      height={36}
+      className="object-contain"
+    />
+
+  <a
+    href= "https://www.linkedin.com/in/shivamsomya?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-medium text-sm sm:text-base text-white hover:text-purple-400 
+    active:scale-95 
+     transition-colors break-all"
+  >
+    
+    linkedin.com/in/shivamsomya
+  </a>
+</div>
+
 
               {/* Quick response note */}
               <div className="border-t border-white/10 pt-6">
                 <p className="text-sm text-gray-400">
-                  💡 <span className="text-gray-300">I typically respond ASAP. It was a pleasure connecting with you — looking forward to staying in touch.</span>
+                  💡 <span className="text-gray-300"> It was a pleasure connecting with you — looking forward to staying in touch. I typically respond ASAP.</span>
                 </p>
               </div>
             </div>

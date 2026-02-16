@@ -18,7 +18,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Work", href: "#work" },
+    { name: "Work", href: "/#work" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -51,7 +51,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-lg md:text-xl font-semibold text-white tracking-wide"
+          className="text-lg md:text-xl font-semibold
+          active:scale-95 
+          
+          text-white tracking-wide"
         >
           Shivam Somya<span className="text-purple-500">.</span>
         </Link>
@@ -72,8 +75,8 @@ export default function Navbar() {
                 href={item.href}
                 className={`relative text-sm font-medium transition-colors ${
                   isActive
-                    ? "text-white"
-                    : "text-gray-300 hover:text-white"
+                    ? "text-purple-500"
+                    : "text-gray-300 hover:text-purple-400"
                 }`}
               >
                 {item.name}
@@ -89,6 +92,7 @@ export default function Navbar() {
           className="hidden md:inline-flex items-center px-5 py-2.5 rounded-xl
                      bg-purple-600 text-white text-sm font-semibold
                      hover:bg-purple-800
+                     
                      transition-colors duration-300"
         >
           Let’s Talk
@@ -114,7 +118,10 @@ export default function Navbar() {
           key={item.name}
           href={item.href}
           onClick={() => setIsOpen(false)}
-          className="text-gray-300 hover:text-white text-sm font-medium transition-colors"
+          className="text-gray-300 hover:text-white text-sm font-medium 
+         
+          active:bg-purple-500/20
+          transition-colors"
         >
           {item.name}
         </Link>
@@ -126,7 +133,10 @@ export default function Navbar() {
         onClick={() => setIsOpen(false)}
         className="mt-4 inline-flex items-center justify-center px-5 py-2.5 rounded-xl
                    bg-purple-600 text-white text-sm font-semibold
-                   hover:bg-purple-800 transition-colors duration-300"
+                   hover:bg-purple-800 
+                   active:scale-95 
+                         active:bg-purple-500/20
+                   transition-colors duration-300"
       >
         Let’s Talk
       </Link>
