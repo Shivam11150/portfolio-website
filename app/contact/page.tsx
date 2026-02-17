@@ -231,7 +231,7 @@ export default function ContactPage() {
       </h3>
 
       <p className="text-gray-300 text-sm mb-6">
-        Your message has been sent successfully.  
+        I've got your message. 
         I’ll get back to you soon.
       </p>
 
