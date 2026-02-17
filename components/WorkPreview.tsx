@@ -3,7 +3,7 @@ import Link from "next/link";
 import HieeOneShopCard from "./HieeOneShopCard";
 import CreativeGarmentsCard from "./CreativeGarmentsCard";
 import SatnamTradersCard from "./SatnamTradersCard";
-import KishanMitroCard from "./KishanMitro";
+import KishanMitroCard from "./kishanmitro";
 
 export default function WorkPreview() {
   return (
