@@ -19,19 +19,15 @@ export default function CaseStudy() {
             <br />
             <span className="text-gray-400">B2B Business Chat & Commerce App</span>
           </h1>
-            <Link
-    href="https:hiee.one"   // Replace with actual product URL
-    target="_blank"
-    className="inline-flex items-center gap-2
-               text-purple-400 font-medium
-               hover:text-purple-300
-               active:scale-95 
-               
-               transition-colors duration-300 mb-6"
-  >
-    View this product
-    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-  </Link>
+      <a
+  href="https://hiee.one"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 text-purple-400 font-medium hover:text-purple-300 transition-colors duration-300 mb-6"
+>
+  View this product..
+</a>
+
           <p className="text-xl text-gray-300 max-w-3xl leading-relaxed mb-8">
             Building a unified platform that simplifies operations for small and mid-sized businesses by combining product catalogs, order management, and business communication into one place.
           </p>
