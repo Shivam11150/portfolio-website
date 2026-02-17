@@ -1,3 +1,46 @@
+
+import Link from "next/link";
+import HieeOneShopCard from "./HieeOneShopCard";
+import CreativeGarmentsCard from "./CreativeGarmentsCard";
+import SatnamTradersCard from "./SatnamTradersCard";
+import KishanMitroCard from "./KishanMitro";
+
+export default function WorkPreview() {
+  return (
+    <section
+      id="work"
+      className="relative bg-black"
+    >
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-purple-950/30 pointer-events-none" />
+
+      <div className="relative max-w-5xl mx-auto px-6 py-28">
+
+        {/* Section heading */}
+        <div className="mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Selected <span className="text-purple-400">Work</span>
+          </h2>
+          <p className="mt-2 text-gray-400 max-w-md">
+           Products and systems I’ve worked on.
+          </p>
+        </div>
+
+        {/* Projects list */}
+        <div className="grid gap-6">
+          <HieeOneShopCard />
+          <CreativeGarmentsCard />
+          <SatnamTradersCard />
+          <KishanMitroCard />
+        </div>
+
+
+      </div>
+    </section>
+  );
+}
+
+/*
 import { projects } from "@/data/projects";
 import Link from "next/link";
 
@@ -6,7 +49,7 @@ export default function WorkPreview() {
     <section id="work" className="bg-background">
       <div className="max-w-5xl mx-auto px-6 py-24">
 
-        {/* Section heading */}
+       
         <div className="mb-10">
           <h2 className="text-2xl md:text-3xl font-semibold text-white">
             Selected Work
@@ -16,7 +59,6 @@ export default function WorkPreview() {
           </p>
         </div>
 
-        {/* Projects list */}
         <div className="grid gap-6">
           {projects.map((project) => (
             <Link
@@ -47,11 +89,11 @@ export default function WorkPreview() {
             </Link>
           ))}
         </div>
-
+/*
       </div>
     </section>
   );
-}
+}*/
 
 
 
