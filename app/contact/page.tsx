@@ -138,28 +138,39 @@ export default function ContactPage() {
               </p>
 
               {/* Email Contact */}
-    <div className="flex items-center gap-3 mt-2">
-  <Image
-      src="/images/gmail.png"
-      alt="Gmail"
-      width={36}
-      height={36}
-      className="object-contain"
-    />
+<div className="flex items-center gap-3 mt-2">
 
-  <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=shivamsomya.pm@gmail.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-medium text-sm sm:text-base text-white hover:text-purple-400
-    active:scale-95 
+  {/* Gmail Icon */}
+  <Image
+    src="/images/gmail.png"
+    alt="Gmail"
+    width={32}
+    height={32}
+    className="object-contain"
+  />
+
+  {/* Email + Copy */}
+  <div className="flex items-center gap-2 flex-wrap">
     
-    transition-colors break-all"
-  >
-    
-    shivamsomya.pm@gmail.com
-  </a>
+    <a
+      href="mailto:shivamsomya.pm@gmail.com"
+      className="text-sm sm:text-base font-medium text-white hover:text-purple-400 transition-colors"
+    >
+      shivamsomya.pm@gmail.com
+    </a>
+
+    <button
+      onClick={() =>
+        navigator.clipboard.writeText("shivamsomya.pm@gmail.com")
+      }
+      className="text-xs text-purple-400 hover:underline active:scale-95 "
+    >
+      Copy
+    </button>
+
+  </div>
 </div>
+
 
 
 
