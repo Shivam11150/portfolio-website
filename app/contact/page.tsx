@@ -10,6 +10,8 @@ export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -28,12 +30,12 @@ export default function ContactPage() {
     });
 
     if (response.ok) {
-      alert("Message sent successfully!");
+      setShowModal(true);
       setName("");
       setEmail("");
       setMessage("");
     } else {
-      alert("Something went wrong.");
+      alert("Something went wrong.You can directly contact me through email or linkedIn. Thanks for understanding!");
     }
     setIsSubmitting(false);
   }
@@ -211,6 +213,39 @@ export default function ContactPage() {
 
       {/* Footer spacing */}
       <div className="py-12" />
+
+      {/*thank you modal*/}
+      {showModal && (
+  <div
+    onClick={() => setShowModal(false)}
+    className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm z-50 px-4"
+  >
+    
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className="bg-zinc-900 border border-white/10 rounded-xl p-8 max-w-sm w-full text-center"
+    >
+      
+      <h3 className="text-xl font-semibold text-white mb-3">
+        Thank You 🙌
+      </h3>
+
+      <p className="text-gray-300 text-sm mb-6">
+        Your message has been sent successfully.  
+        I’ll get back to you soon.
+      </p>
+
+      <button
+        onClick={() => setShowModal(false)}
+        className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
+      >
+        Close
+      </button>
+
+    </div>
+  </div>
+)}
+
     </main>
   );
 }
