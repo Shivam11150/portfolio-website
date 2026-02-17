@@ -1,7 +1,16 @@
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Shivam Somya | Product Manager",
+  description:
+    " Shivam Somya – Product Manager building scalable B2B products.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -13,11 +22,11 @@ export default function RootLayout({
       <body className="bg-background text-textMain min-h-screen">
         <Navbar />
         {children}
-    
       </body>
     </html>
   );
 }
+
 
 /*
 import type { Metadata } from "next";
