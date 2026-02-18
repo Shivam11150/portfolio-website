@@ -74,7 +74,7 @@ export default function Hero() {
               alt="My workingspace"
               width={1200}
               height={1600}
-              quality ={100}
+              quality ={75}
               priority
               className="relative w-full h-auto object-contain 
               rounded-3xl border border-purple-500/20"
