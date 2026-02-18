@@ -3,7 +3,35 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
+  import { useState } from 'react'
+
 export default function AboutSnap() {
+
+ 
+  const [aiReply, setAiReply] = useState("")
+  const [loading, setLoading] = useState(false)
+
+ const testAI = async () => {
+    try {
+      setLoading(true)
+
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: "Hello AI, introduce yourself." }),
+      })
+
+      const data = await res.json()
+      setAiReply(data.reply)
+
+    } catch (error) {
+      console.error("API Error:", error)
+      setAiReply("Something went wrong.")
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <section className="py-8 md:py-5 bg-black">
       <div className="max-w-5xl mx-auto px-6">
@@ -34,9 +62,27 @@ export default function AboutSnap() {
               Know more  
               <ArrowRight size={18} />
             </Link>
+
+               {/* 🔥 AI Test Button */}
+            <button
+              onClick={testAI}
+              className="px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 active:scale-95 transition-all text-white font-semibold"
+            >
+            try ai
+            </button>
+
           </div>
+ {/* 🔥 AI Reply Output */}
+          {aiReply && (
+            <div className="mt-6 p-4 bg-purple-950/30 border border-purple-500/20 rounded-lg text-gray-300">
+              <p className="text-sm text-purple-400 mb-2">AI Reply:</p>
+              <p>{aiReply}</p>
+            </div>
+          )}
+          
         </article>
       </div>
+
     </section>
   )
 }

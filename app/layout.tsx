@@ -2,6 +2,8 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
+import ChatWidget from "@/components/ChatWidget";
+
 
 export const metadata: Metadata = {
   title: "Shivam Somya | Product Manager",
@@ -22,6 +24,7 @@ export default function RootLayout({
       <body className="bg-background text-textMain min-h-screen">
         <Navbar />
         {children}
+         <ChatWidget />
       </body>
     </html>
   );
