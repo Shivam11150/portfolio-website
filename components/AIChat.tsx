@@ -109,7 +109,7 @@ export default function AIChat() {
     setInput(e.target.value);
     autoResize();
   }}
-  placeholder="Type your message..."
+  placeholder="Ask about Shivam’s Projects, leadership style, or paste a job requirements to check fit…"
   className="
     flex-1
     bg-zinc-800
