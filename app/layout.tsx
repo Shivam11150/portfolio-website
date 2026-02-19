@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import ChatWidget from "@/components/ChatWidget";
-
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: "Shivam Somya | Product Manager",
@@ -25,6 +25,7 @@ export default function RootLayout({
         <Navbar />
         {children}
          <ChatWidget />
+          <Analytics />
       </body>
     </html>
   );
