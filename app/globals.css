@@ -1,4 +1,109 @@
-@import "tailwindcss";  
+@import "tailwindcss";
+
+/* ------------------------------
+   🎨 Root Theme Variables
+------------------------------ */
+
+:root {
+  --background: #0b0b0f;
+  --foreground: #e4e4e7; /* zinc-200 */
+}
+
+/* ------------------------------
+   🖥 Global Base Styles
+------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ------------------------------
+   🎯 Premium Dark Scrollbar
+------------------------------ */
+
+/* Chrome / Edge / Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+ /* zinc-700 */
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #231429; /* zinc-600 */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 #0f0f0f;
+}
+
+/* ------------------------------
+   🔮 Floating Button Animation
+------------------------------ */
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 2.5s ease-in-out infinite;
+}
+
+/* Optional subtle glow pulse */
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 0px rgba(124, 58, 237, 0.4); }
+  50% { box-shadow: 0 0 15px rgba(124, 58, 237, 0.6); }
+  100% { box-shadow: 0 0 0px rgba(124, 58, 237, 0.4); }
+}
+
+.animate-glow {
+  animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+/* AI Glow Animation */
+
+@keyframes aiGlow {
+  0% {
+    box-shadow: 0 0 6px rgba(34, 211, 238, 0.6),
+                0 0 12px rgba(34, 211, 238, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.9),
+                0 0 50px rgba(34, 211, 238, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 6px rgba(34, 211, 238, 0.6),
+                0 0 12px rgba(34, 211, 238, 0.4);
+  }
+}
+
+.animate-aiGlow {
+  animation: aiGlow 2.5s ease-in-out infinite;
+}
+
+
+
+/*@import "tailwindcss";  // before scrollbar fix
 
 
 
