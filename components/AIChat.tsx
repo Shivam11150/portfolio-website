@@ -9,7 +9,7 @@ interface Message {
 
 export default function AIChat() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "Hi I'm shivam's Ai assistant👋 How can I help you today?" }
+    { role: "assistant", content: "Hi I'm shivam's AI assistant👋 How can I help you today?" }
   ]);
 
   const [input, setInput] = useState<string>("");
