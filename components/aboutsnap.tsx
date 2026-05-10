@@ -63,22 +63,24 @@ export default function AboutSnap() {
               <ArrowRight size={18} />
             </Link>
 
-               {/* 🔥 AI Test Button */}
+          {/* 🔥 AI Test Button - Commented out for production
             <button
               onClick={testAI}
               className="px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 active:scale-95 transition-all text-white font-semibold"
             >
             try ai
             </button>
+          */}
 
           </div>
- {/* 🔥 AI Reply Output */}
+ {/* 🔥 AI Reply Output - Commented out for production
           {aiReply && (
             <div className="mt-6 p-4 bg-purple-950/30 border border-purple-500/20 rounded-lg text-gray-300">
               <p className="text-sm text-purple-400 mb-2">AI Reply:</p>
               <p>{aiReply}</p>
             </div>
           )}
+          */}
           
         </article>
       </div>
